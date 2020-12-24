@@ -1,8 +1,6 @@
 
 // from data.js
 var tableData = data;
-var tbody = d3.select("tbody")
- 
 // YOUR CODE HERE!
 
 // Select the button
@@ -26,6 +24,7 @@ function runEnter() {
     var filteredData = tableData.filter(tableData => tableData.datetime === inputDate);
     console.log(filteredData);
 
+    tbody = d3.select("tbody")
 
     filteredData.forEach((sighting) => {
         var row = tbody.append("tr"); 
